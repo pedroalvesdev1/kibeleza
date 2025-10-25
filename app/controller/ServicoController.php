@@ -32,4 +32,15 @@ class ServicoController extends Controller
             exit;
         }
     }
+
+    public function deletarServico()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $servicoModel = new Servico();
+            $servicoModel->deletarServico($id);
+
+            header("Location: " . URL_BASE . "index.php?url=servico");
+        }
+    }
 }

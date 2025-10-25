@@ -14,21 +14,21 @@
     <main>
         <?php require_once("template/banner.php") ?>
 
-        <section class="site" id="form">
-            <h2>contato</h2>
+        <section class="site" id="contato">
+            <h2>Contato</h2>
             <form class="contato-form" action="email.php" method="POST">
-                <div class="info-c">
+                <div>
                     <label>Nome</label>
                     <input type="text" name="nome" placeholder="Nome" required>
-                    <label>E-mail</label>
-                    <input type="text" name="email" placeholder="E-mail" required>
+                    <label>E-Mail</label>
+                    <input type="email" name="email" placeholder="E-mail" required>
                     <label>Telefone</label>
                     <input type="tel" name="telefone" placeholder="Telefone" required>
                 </div>
-                <div class="menssage">
+                <div>
                     <label>Mensagem</label>
                     <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
-                    <div class="boton">
+                    <div>
                         <button type="submit">Enviar</button>
                         <button type="reset">Limpar</button>
                     </div>

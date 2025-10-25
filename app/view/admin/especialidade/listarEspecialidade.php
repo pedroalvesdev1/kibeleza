@@ -18,7 +18,11 @@
           <td><?= $especialidade['status_especialidade'] ?></td>
           <td class="actions">
             <button class="edit">Alterar</button>
-            <button class="delete">Excluir</button>
+            <a href="<?= URL_BASE ?>index.php?url=especialidade/deletarEspecialidade&id=<?= $especialidade['id_especialidade'] ?>"
+              class="deletar"
+              onclick="return confirm('Deseja realmente excluir este especialidade? Esta ação não pode ser desfeita!')">
+              Excluir
+            </a>
           </td>
         </tr>
       <?php endforeach; ?>

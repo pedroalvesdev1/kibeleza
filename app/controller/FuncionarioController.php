@@ -36,4 +36,18 @@ class FuncionarioController extends Controller
         }
     }
 
+
+    public function deletarFuncionario()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $funcionarioModel = new Funcionario();
+            $funcionarioModel->deletarFuncionario($id);
+
+            //Redireciona de volta para a lista
+            header("Location: " . URL_BASE . "index.php?url=funcionario");
+            exit;
+        }
+    }
+
 }

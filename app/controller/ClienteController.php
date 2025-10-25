@@ -38,4 +38,17 @@ class ClienteController extends Controller
             exit;
         }
     }
+
+    public function deletarCliente()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $clienteModel = new Cliente();
+            $clienteModel->deletarCliente($id);
+
+            //Redireciona de volta para a lista
+            header("Location: " . URL_BASE . "index.php?url=cliente");
+            exit;
+        }
+    }
 }

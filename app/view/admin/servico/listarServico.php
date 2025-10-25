@@ -21,20 +21,22 @@
                     <td><?= $servico['duracao_servico'] ?></td>
                     <td><?= $servico['preco_servico'] ?></td>
                     <td>
-                        <?php 
-                            foreach ($especialidades as $esp) {
-                                if ($esp['id_especialidade'] == $servico['id_especialidade']) {
-                                    echo $esp['nome_especialidade'];
-                                    break;
-                                }
+                        <?php
+                        foreach ($especialidades as $esp) {
+                            if ($esp['id_especialidade'] == $servico['id_especialidade']) {
+                                echo $esp['nome_especialidade'];
+                                break;
                             }
+                        }
                         ?>
                     </td>
 
                     <td><?= $servico['status_servico'] ?></td>
                     <td class="actions">
                         <button class="edit">Alterar</button>
-                        <button class="delete">Excluir</button>
+                        <a href="<? URL_BASE ?>index.php?url=servico/deletarServico&id=<?= $servico['id_servico'] ?>" class="deletar" onclick="return confirm ('Deseja realmente excluir este serviço? Está ação não pode ser desfeita!')">
+                            Excluir
+                        </a>
                     </td>
 
                 </tr>

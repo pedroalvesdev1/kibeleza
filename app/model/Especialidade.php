@@ -28,4 +28,20 @@ class Especialidade extends Model
         $stmt->bindValue(':status', $status);
         $stmt->execute();
     }
+
+    public function deletarEspecialidade($id){
+        $sql = "DELETE FROM tbl_especialidade WHERE id_especialidade = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
+    public function contarEspecialidade(): int
+    {
+        $sql = "SELECT COUNT(*) as total FROM tbl_especialidade";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return (int)$row['total'];
+    }
 }

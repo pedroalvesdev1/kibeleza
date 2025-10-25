@@ -28,4 +28,21 @@ class Cliente extends Model
         $stmt->bindValue(':status', $status);
         $stmt->execute();
     }
+
+    public function deletarCliente($id)
+    {
+        $sql = "DELETE FROM tbl_cliente WHERE id_cliente = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
+    public function contarClientes()
+    {
+        $sql = "SELECT COUNT(*) as total FROM tbl_cliente";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return $result['total'] ?? 0;
+    }
 }

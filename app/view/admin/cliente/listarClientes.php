@@ -23,7 +23,11 @@
                     <td><?= $cliente['status_cliente'] ?></td>             
                     <td class="actions">
                         <button class="edit">Alterar</button>
-                        <button class="delete">Excluir</button>
+                         <a href="<?= URL_BASE ?>index.php?url=cliente/deletarCliente&id=<?= $cliente['id_cliente'] ?>"
+                        class="deletar"
+                        onclick="return confirm('Deseja realmente excluir este cliente? Esta ação não pode ser desfeita!')">
+                        Excluir
+                        </a>
                     </td>    
                 </tr>         
             <?php endforeach; ?>         
