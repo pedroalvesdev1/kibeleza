@@ -106,7 +106,7 @@ button {
     display: block;
 }
 
-.cards-container{
+.cards-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -114,8 +114,8 @@ button {
     margin-top: 30px;
 }
 
-.card{
-    min-width: 200px;
+.card {
+    min-width: 620px;
     width: calc(50% - 40px);
     background: #fff;
     border: #401334 solid 5px;
@@ -126,24 +126,37 @@ button {
     transition: transform 0.2s;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(5px);
     background-color: #8C3A6750;
 }
 
-.card h2{
+.card h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #401334;
     border-right: none;
 }
 
-.card p{
+.card p {
     font-size: 3rem;
     font-weight: bold;
     color: #8C3A67;
 }
 
+.linkDash {
+    text-decoration: none;
+    color: #401334;
+    font-family: "Anton", sans-serif;
+}
+
+.linkDash p {
+    font-size: 40px;
+}
+
+.linkDash h2{
+    font-size: 30px;
+}
 
 h2 {
     margin-bottom: 15px;

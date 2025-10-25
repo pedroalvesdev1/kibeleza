@@ -50,30 +50,40 @@
             } else {
             ?>
                 <div class="cards-container">
-                    <div class="card">
-                        <h2>Clientes</h2>
-                        <p><?= $totalClientes ?></p>
-                    </div>
+                    <a class="linkDash" href="<?= URL_BASE ?>index.php?url=cliente">
+                        <div class="card">
+                            <h2>Clientes</h2>
+                            <p><?= $totalClientes ?></p>
+                        </div>
+                    </a>
 
-                    <div class="card">
-                        <h2>Serviços</h2>
-                        <p><?= $totalServico ?></p>
-                    </div>
+                    <a class="linkDash" href="<?= URL_BASE ?>index.php?url=servico">
+                        <div class="card">
+                            <h2>Serviços</h2>
+                            <p><?= $totalServico ?></p>
+                        </div>
+                    </a>
 
-                    <div class="card">
-                        <h2>Funcionários</h2>
-                        <p><?= $totalFuncionario ?></p>
-                    </div>
+                    <a class="linkDash" href="<?= URL_BASE ?>index.php?url=funcionario">
+                        <div class="card">
+                            <h2>Funcionários</h2>
+                            <p><?= $totalFuncionario ?></p>
+                        </div>
+                    </a>
 
-                    <div class="card">
-                        <h2>Especialidades</h2>
-                        <p><?= $totalEspecialidade ?></p>
-                    </div>
+                    <a class="linkDash" href="<?= URL_BASE ?>index.php?url=especialidade">
+                        <div class="card">
+                            <h2>Especialidades</h2>
+                            <p><?= $totalEspecialidade ?></p>
+                        </div>
+                    </a>
 
-                    <div class="card">
-                        <h2>Agendamentos</h2>
-                        <p><?= $totalAgendamentos ?></p>
-                    </div>
+                    <a class="linkDash" href="<?= URL_BASE ?>index.php?url=agendamento">
+                        <div class="card">
+                            <h2>Agendamentos</h2>
+                            <p><?= $totalAgendamentos ?></p>
+                        </div>
+                    </a>
 
                 </div>
             <?php
