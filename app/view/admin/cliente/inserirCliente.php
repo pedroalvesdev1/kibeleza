@@ -1,4 +1,5 @@
 <form id="form-clientes" class="data-form" method="POST" action="<?= URL_BASE ?>index.php?url=cliente/inserirCliente">
+    
     <input type="hidden" name="id_cliente">
 
     <input type="text" name="nome_cliente" placeholder="Nome" required>

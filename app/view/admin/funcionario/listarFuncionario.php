@@ -1,4 +1,4 @@
-<table id="table-funcionario" class="data-table">
+<table id="table-funcionarios" class="data-table">
   <thead>
     <tr>
       <th>ID</th>
