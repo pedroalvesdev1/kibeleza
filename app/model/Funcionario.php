@@ -26,4 +26,20 @@ class Funcionario extends Model
         $stmt->bindValue(':status', $status);
         $stmt->execute();
     }
+
+    public function deletarFuncionario($id){
+        $sql = "DELETE FROM tbl_funcionario WHERE id_funcionario = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
+    public function contarFuncionario()
+    {
+        $sql = "SELECT COUNT(*) as total FROM tbl_funcionario";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return $result['total'] ?? 0;
+    }
 }

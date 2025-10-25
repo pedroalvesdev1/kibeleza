@@ -22,7 +22,11 @@
           <td><?= $funcionario['status_funcionario']  ?></td>
           <td class="actions">
             <button class="edit">Alterar</button>
-            <button class="delete">Excluir</button>
+            <a href="<?= URL_BASE ?>index.php?url=funcionario/deletarFuncionario&id=<?= $funcionario['id_funcionario'] ?>"
+              class="deletar"
+              onclick="return confirm('Deseja realmente excluir este funcionario? Esta ação não pode ser desfeita!')">
+              Excluir
+            </a>
           </td>
         </tr>
       <?php endforeach; ?>

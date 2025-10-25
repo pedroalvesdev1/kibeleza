@@ -25,4 +25,20 @@ class Servico extends Model
         $stmt->bindValue(':status', $status);
         $stmt->execute();
     }
+
+    public function deletarServico($id){
+        $sql = "DELETE FROM tbl_servico WHERE id_servico = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
+     public function contarServico()
+    {
+        $sql = "SELECT COUNT(*) as total FROM tbl_servico";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+        return $result['total'] ?? 0;
+    }
 }

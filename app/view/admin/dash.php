@@ -21,12 +21,24 @@
                 </button>
             </div>
             <ul class="menu">
-                <a href="<?= URL_BASE ?>index.php?url=dash"><li>Dashboard</li></a>
-                <a href="<?= URL_BASE ?>index.php?url=cliente"><li>Clientes</li></a>
-                <a href="<?= URL_BASE ?>index.php?url=funcionario"><li>Funcionários</li></a>
-                <a href="<?= URL_BASE ?>index.php?url=especialidade"><li>Especialidades</li></a>
-                <a href="<?= URL_BASE ?>index.php?url=servico"><li>Serviços</li></a>
-                <a href="<?= URL_BASE ?>index.php?url=agendamento"><li>Agendamento</li></a>
+                <a href="<?= URL_BASE ?>index.php?url=dash">
+                    <li>Dashboard</li>
+                </a>
+                <a href="<?= URL_BASE ?>index.php?url=cliente">
+                    <li>Clientes</li>
+                </a>
+                <a href="<?= URL_BASE ?>index.php?url=funcionario">
+                    <li>Funcionários</li>
+                </a>
+                <a href="<?= URL_BASE ?>index.php?url=especialidade">
+                    <li>Especialidades</li>
+                </a>
+                <a href="<?= URL_BASE ?>index.php?url=servico">
+                    <li>Serviços</li>
+                </a>
+                <a href="<?= URL_BASE ?>index.php?url=agendamento">
+                    <li>Agendamento</li>
+                </a>
             </ul>
         </nav>
 
@@ -36,7 +48,35 @@
             if (isset($conteudo)) {
                 $this->carregarViews($conteudo, $dados);
             } else {
-                echo "<p>Bem-vindo ao Dashboard</p>";
+            ?>
+                <div class="cards-container">
+                    <div class="card">
+                        <h2>Clientes</h2>
+                        <p><?= $totalClientes ?></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Serviços</h2>
+                        <p><?= $totalServico ?></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Funcionários</h2>
+                        <p><?= $totalFuncionario ?></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Especialidades</h2>
+                        <p><?= $totalEspecialidade ?></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>Agendamentos</h2>
+                        <p><?= $totalAgendamentos ?></p>
+                    </div>
+
+                </div>
+            <?php
             }
             ?>
         </main>

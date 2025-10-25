@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+section{
+    padding: 20px;
+
+    h2{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .contato-form{
+        display: flex;
+        justify-content: space-around;
+        font-family: "Anton", sans-serif;
+        width: 100%;
+
+        div:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+
+            label{
+                padding: 5px 0;
+                font-size: 18px;
+            }
+
+            input{
+                font-family: "Anton", sans-serif;
+                width: 80%;
+                font-size: 15px;
+            }
+        }
+
+        div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            label{
+                padding: 5px 0;
+                font-size: 18px;
+            }
+
+            textarea{
+                font-family: "Anton", sans-serif;
+                font-size: 15px;
+            }
+
+            div{
+                button{
+                    margin: 10px;
+                    width: 40%;
+                    font-family: "Anton", sans-serif;
+                    background: #401334;
+                    color: #FFFFFF;
+                    font-size: 15px;
+                    border: none;
+                }
+            }
+        }
+    }
+}

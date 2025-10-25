@@ -13,4 +13,28 @@ class Agendamento extends Model
         }
         return [];
     }
+
+    public function inserirAgendamento($id_cliente, $id_funcionario, $id_servico, $data, $hora, $status, $observacao)
+    {
+        $sql = "INSERT INTO tbl_agendamento
+                (id_cliente, id_funcionario, id_servico, data_agendamento, hora_agendamento, status_agendamento, observacoes, created_date_agendamento)
+                VALUES (:cliente, :funcionario, :servico, :data, :hora, :status, :observacao, NOW())";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':cliente', $id_cliente);
+        $stmt->bindValue(':funcionario', $id_funcionario);
+        $stmt->bindValue(':servico', $id_servico);
+        $stmt->bindValue(':data', $data);
+        $stmt->bindValue(':hora', $hora);
+        $stmt->bindValue(':status', $status);
+        $stmt->bindValue(':observacao', $observacao);
+        $stmt->execute();
+    }
+    public function contarAgendamentos(): int
+    {
+        $sql = "SELECT COUNT(*) AS total FROM tbl_agendamento";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return (int)$row['total'];
+    }
 }

@@ -29,4 +29,17 @@ class EspecialidadeController extends Controller
         }
     }
 
+    public function deletarEspecialidade()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $especialidadeModel = new Especialidade();
+            $especialidadeModel->deletarEspecialidade($id);
+
+            //Redireciona de volta para a lista
+            header("Location: " . URL_BASE . "index.php?url=especialidade");
+            exit;
+        }
+    }
+
 }
