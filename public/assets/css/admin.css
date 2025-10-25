@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+font-family: "Roboto", sans-serif; Texto
+font-family: "Anton", sans-serif; Link
+font-family: "Lobster", sans-serif; Titulo
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #401334;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    font-family: "Anton", sans-serif;
+}
+
+#logout {
+    margin-top: 10px;
+    padding: 2px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#logout img {
+    width: 50px;
+    height: 50px;
+    border: solid #ffffff 2px;
+    border-radius: 50px;
+}
+
+#logout img:hover {
+    border: solid #ffffff 4px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu li:hover {
+    background-color: #8C3A67;
+}
+
+.menu li a{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    overflow-y: auto;
+}
+
+.screen {
+    display: block;
+}
+
+
+h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Lobster", sans-serif;
+    color: #401334;
+    border-bottom: #401334 solid 5px;
+    border-right: #8C3A67 solid 5px;
+}
+
+.buttons {
+    margin-bottom: 15px;
+}
+
+.buttons button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8C3A67;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #401334;
+}
+
+/* Tabela */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #8C3A67;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #401334;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}
+
+.data-table td button {
+    background: #401334;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+.data-table td button:hover {
+    color: #8C3A67;
+}
+
+/* Formulário */
+.data-form {
+    display: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.data-form input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.data-form button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #401334;
+    color: white;
+    cursor: pointer;
+}
+
+.data-form button:hover {
+    background-color: #8C3A67;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #401334;
+    color: #ecf0f1;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 250px);
+    left: 250px;
+    font-family: "Anton", sans-serif;
+}
+
+/*formulário */
+
+hr {
+    width: 96%;
+    border: 2px solid #4c1637;
+    border-radius: 2px;
+}
+
+.btn-topo {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 40px;
+}
+
+.btn-topo button {
+    background-color: #6d2c4a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-topo button:hover {
+    background-color: #4c1637;
+}
+
+.data-form {
+    background-color: #f1f4f4;
+    border-radius: 8px;
+    padding: 20px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.data-form input[type="text"],
+.data-form input[type="number"],
+.data-form textarea,
+.data-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: none;
+}
+
+.data-form div {
+    display: flex;
+    gap: 10px;
+}
+
+.data-form div input,
+.data-form div select {
+    flex: 1;
+}
+
+.data-form button {
+    background-color: #6d2c4a;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: 0.3s;
+}
+
+.data-form button:hover {
+    background-color: #4c1637;
+}
+
+/* btoes listar*/
+
+.data-table th,
+.data-table td.actions {
+  text-align: center;
+}
+
+h3{
+    font-size: 25px;
+}
