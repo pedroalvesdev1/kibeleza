@@ -20,10 +20,10 @@
           <td><?= $funcionario['email_funcionario']  ?></td>
           <td><?= $funcionario['cargo_funcionario']  ?></td>
           <td><?= $funcionario['status_funcionario']  ?></td>
-           <td class="actions">
-                        <button class="edit">Alterar</button>
-                        <button class="delete">Excluir</button>
-                    </td>
+          <td class="actions">
+            <button class="edit">Alterar</button>
+            <button class="delete">Excluir</button>
+          </td>
         </tr>
       <?php endforeach; ?>
     <?php else: ?>
@@ -32,4 +32,4 @@
       </tr>
     <?php endif; ?>
   </tbody>
-</table> 
+</table>

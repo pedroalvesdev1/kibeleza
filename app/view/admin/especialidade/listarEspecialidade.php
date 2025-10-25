@@ -16,10 +16,10 @@
           <td><?= $especialidade['nome_especialidade'] ?></td>
           <td><?= $especialidade['descricao_especialidade'] ?></td>
           <td><?= $especialidade['status_especialidade'] ?></td>
-           <td class="actions">
-                        <button class="edit">Alterar</button>
-                        <button class="delete">Excluir</button>
-                    </td>
+          <td class="actions">
+            <button class="edit">Alterar</button>
+            <button class="delete">Excluir</button>
+          </td>
         </tr>
       <?php endforeach; ?>
     <?php else: ?>
