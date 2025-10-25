@@ -14,4 +14,16 @@ class Funcionario extends Model
         }
         return [];
     }
+    public function inserirFuncionario($nome, $telefone, $email, $cargo, $status): void
+    {
+        $sql = "INSERT INTO tbl_funcionario (nome_funcionario, telefone_funcionario, email_funcionario, cargo_funcionario, status_funcionario) 
+                VALUES (:nome, :telefone, :email, :cargo, :status)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':nome', $nome);
+        $stmt->bindValue(':telefone', $telefone);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':cargo', $cargo);
+        $stmt->bindValue(':status', $status);
+        $stmt->execute();
+    }
 }

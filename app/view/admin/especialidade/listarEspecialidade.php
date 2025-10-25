@@ -1,4 +1,4 @@
-<table id="table-especialidade" class="data-table">
+<table id="table-especialidades" class="data-table">
   <thead>
     <tr>
       <th>ID</th>

@@ -13,4 +13,6 @@ class AgendamentoController extends Controller
         
         $this->carregarViews('admin/dash', $dados);
     }
+
+    
 }
