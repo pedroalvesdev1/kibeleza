@@ -8,5 +8,5 @@
 
     <!-- Inclusão da tabela de clientes -->
     <?php require_once('listarClientes.php'); ?>
-    <?php require_once('inserirClientes.php'); ?>
+    <?php require_once('inserirCliente.php'); ?>
 </section>

@@ -53,7 +53,7 @@ class Rotas
 
         if (!file_exists('../app/controller/' . $controladorAtual . '.php') || !method_exists($controladorAtual, $acaoAtual)) {
             //Caso não exista exibe mensagem de erro (útil para debug)
-            echo "Estou aqui - não exite o " . $controladorAtual . ' em a ação atual: ' . $acaoAtual;
+            echo "Estou aqui - não existe o " . $controladorAtual . ' em a ação atual: ' . $acaoAtual;
 
             //define o controlador de erro e a ação padrão
             $controladorAtual = 'ErrorController';
