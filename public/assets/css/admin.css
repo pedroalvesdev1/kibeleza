@@ -69,9 +69,13 @@ button {
 #logout img:hover {
     border: solid #ffffff 4px;
 }
-
 .menu {
     list-style: none;
+}
+
+.menu a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .menu li {
@@ -84,12 +88,6 @@ button {
 
 .menu li:hover {
     background-color: #8C3A67;
-}
-
-.menu li a{
-    color: inherit;
-    text-decoration: none;
-    font-weight: 500;
 }
 
 /* Main Content */
