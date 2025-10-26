@@ -1,4 +1,4 @@
-# Kibleza - Plataforma Online
+# Kibeleza - Plataforma Online
 
 `Kibleza` é um projeto desenvolvido em PHP que simula uma clínica de estética, oferecendo funcionalidades de cadastro e gerenciamento de **Clientes**, **Funcionários**, **Especialidades**, **Serviços** e **Agendamentos**.
 
@@ -26,4 +26,4 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 O projeto está hospedado e pode ser acessado diretamente pelo link abaixo:
 
-[🔗 Acessar Kibleza](https://4semestre.ubsistema.com.br/aluno/pedro/kibeleza/public/index.php?url=home)
+[🔗 Acessar Kibeleza](https://4semestre.ubsistema.com.br/aluno/pedro/kibeleza/public/index.php?url=home)
