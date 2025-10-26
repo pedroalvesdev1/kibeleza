@@ -29,6 +29,7 @@ class Agendamento extends Model
         $stmt->bindValue(':observacao', $observacao);
         $stmt->execute();
     }
+
     public function contarAgendamentos(): int
     {
         $sql = "SELECT COUNT(*) AS total FROM tbl_agendamento";
@@ -37,4 +38,13 @@ class Agendamento extends Model
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return (int)$row['total'];
     }
+    
+    public function deletarAgendamento($id)
+    {
+        $sql = "DELETE FROM tbl_agendamento WHERE id_agendamento = :id";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute();
+    }
+
 }
