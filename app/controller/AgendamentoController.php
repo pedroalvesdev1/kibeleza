@@ -44,7 +44,18 @@ class AgendamentoController extends Controller
         }
     }
 
-   
+   public function deletarAgendamento()
+    {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $modelAgendamento = new Agendamento();
+            $modelAgendamento->deletarAgendamento($id);
+
+            //Redireciona de volta para a lista
+            header("Location: " . URL_BASE . "index.php?url=agendamento");
+            exit;
+        }
+    }
 
     
 }
