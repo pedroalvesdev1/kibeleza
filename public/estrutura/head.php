@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="<?php URL_BASE ?>assets/img/icone.png" type="image/png">
-    <title>KIBELEZA - <?= $titulo ?></title>
+    <title>KIBELEZA | <?= $titulo ?></title>
      <!-- Reseta estrutura do navegador - Sempre em primeiro -->
     <link rel="stylesheet" href="<?php URL_BASE ?>assets/css/reset.css">
     <!-- CSS SLICK -->
