@@ -33,7 +33,18 @@
 
                     <td><?= $servico['status_servico'] ?></td>
                     <td class="actions">
-                        <button class="edit">Alterar</button>
+                        <a href="#"
+                        class="editar"
+                        data-id="<?= $servico['id_servico'] ?>"
+                        data-nome="<?= $servico['nome_servico'] ?>"
+                        data-descricao="<?= $servico['descricao_servico'] ?>"
+                        data-duracao="<?= $servico['duracao_servico'] ?>"
+                        data-preco="<?= $servico['preco_servico'] ?>"
+                        data-especialidade="<?= $servico['id_especialidade'] ?>"
+                        data-status="<?= $servico['status_servico'] ?>"
+                        onclick="editarServico(this)"
+                        >Alterar
+                    </a>
                         <a href="<? URL_BASE ?>index.php?url=servico/deletarServico&id=<?= $servico['id_servico'] ?>" class="deletar" onclick="return confirm ('Deseja realmente excluir este serviço? Está ação não pode ser desfeita!')">
                             Excluir
                         </a>

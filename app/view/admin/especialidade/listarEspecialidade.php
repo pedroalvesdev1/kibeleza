@@ -17,7 +17,15 @@
           <td><?= $especialidade['descricao_especialidade'] ?></td>
           <td><?= $especialidade['status_especialidade'] ?></td>
           <td class="actions">
-            <button class="edit">Alterar</button>
+            <a href="#"
+              class="editar"
+              data-id="<?= $especialidade['id_especialidade'] ?>"
+              data-nome="<?= $especialidade['nome_especialidade'] ?>"
+              data-descricao="<?= $especialidade['descricao_especialidade'] ?>"
+              data-status="<?= $especialidade['status_especialidade'] ?>"
+              onclick="editarEspecialidade(this);">
+              Alterar
+            </a>
             <a href="<?= URL_BASE ?>index.php?url=especialidade/deletarEspecialidade&id=<?= $especialidade['id_especialidade'] ?>"
               class="deletar"
               onclick="return confirm('Deseja realmente excluir este especialidade? Esta ação não pode ser desfeita!')">
