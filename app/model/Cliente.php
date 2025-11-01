@@ -45,4 +45,25 @@ class Cliente extends Model
         $result = $stmt->fetch();
         return $result['total'] ?? 0;
     }
+
+    public function atualizar ($dados)
+    {
+        $sql = "UPDATE tbl_cliente
+                SET nome_cliente = :nome_cliente,
+                    telefone_cliente = :telefone_cliente,
+                    email_cliente = :email_cliente,
+                    data_nascimento_cliente = :data_nascimento_cliente,
+                    status_cliente = :status_cliente
+                WHERE id_cliente = :id_cliente";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':nome_cliente', $dados['nome_cliente']);
+        $stmt->bindValue(':telefone_cliente', $dados['telefone_cliente']);
+        $stmt->bindValue(':email_cliente', $dados['email_cliente']);
+        $stmt->bindValue(':data_nascimento_cliente', $dados['data_nascimento_cliente']);
+        $stmt->bindValue(':status_cliente', $dados['status_cliente']);
+        $stmt->bindValue(':id_cliente', $dados['id_cliente']);
+
+       return $stmt->execute();
+    }
 }

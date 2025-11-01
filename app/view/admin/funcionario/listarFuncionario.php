@@ -21,7 +21,17 @@
           <td><?= $funcionario['cargo_funcionario']  ?></td>
           <td><?= $funcionario['status_funcionario']  ?></td>
           <td class="actions">
-            <button class="edit">Alterar</button>
+            <a href="#"
+              class="editar"
+              data-id="<?= $funcionario['id_funcionario'] ?>"
+              data-nome="<?= $funcionario['nome_funcionario'] ?>"
+              data-telefone="<?= $funcionario['telefone_funcionario'] ?>"
+              data-email="<?= $funcionario['email_funcionario'] ?>"
+              data-cargo="<?= $funcionario['cargo_funcionario'] ?>"
+              data-status="<?= $funcionario['status_funcionario'] ?>"
+              onclick="editarFuncionario(this)">
+              Alterar
+            </a>
             <a href="<?= URL_BASE ?>index.php?url=funcionario/deletarFuncionario&id=<?= $funcionario['id_funcionario'] ?>"
               class="deletar"
               onclick="return confirm('Deseja realmente excluir este funcionario? Esta ação não pode ser desfeita!')">

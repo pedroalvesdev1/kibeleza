@@ -27,11 +27,24 @@
                     <td><?= $agendamento['status_agendamento'] ?></td>
                     <td><?= $agendamento['observacoes'] ?></td>
                     <td class="actions">
-                        <button class="edit">Alterar</button>
-                         <a href="<?= URL_BASE ?>index.php?url=agendamento/deletarAgendamento&id=<?= $agendamento['id_agendamento'] ?>"
-                        class="deletar"
-                        onclick="return confirm('Deseja realmente excluir este agendamento? Esta ação não pode ser desfeita!')">
-                        Excluir
+                        <a href="#" 
+                            data-id="<?= $agendamento['id_agendamento'] ?>"
+                            data-cliente="<?= $agendamento['id_cliente'] ?>"
+                            data-funcionario="<?= $agendamento['id_funcionario'] ?>"
+                            data-servico="<?= $agendamento['id_servico'] ?>"
+                            data-data="<?= $agendamento['data_agendamento'] ?>"
+                            data-hora="<?= $agendamento['hora_agendamento'] ?>"
+                            data-status="<?= $agendamento['status_agendamento'] ?>"
+                            data-observacao="<?= $agendamento['observacoes'] ?>"
+                            onclick="editarAgendamento(this)" 
+                            >
+                            Alterar
+                        </a>
+
+                        <a href="<?= URL_BASE ?>index.php?url=agendamento/deletarAgendamento&id=<?= $agendamento['id_agendamento'] ?>"
+                            class="deletar"
+                            onclick="return confirm('Deseja realmente excluir este agendamento? Esta ação não pode ser desfeita!')">
+                            Excluir
                         </a>
                     </td>
                 </tr>

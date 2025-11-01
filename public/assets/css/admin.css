@@ -87,7 +87,7 @@ button {
     margin-bottom: 5px;
     transition: background-color 0.3s;
     font-weight: 700;
-
+    
 }
 
 .menu li:hover {
@@ -217,7 +217,7 @@ h2 {
     border-radius: 5px;
     transition: color 0.3s;
     font-size: 13px;
-
+    
 }
 
 .data-table .actions button :hover {
@@ -365,6 +365,12 @@ hr {
 .data-table th,
 .data-table td.actions {
     text-align: center;
+}
+
+.actions{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
 }
 
 h3 {

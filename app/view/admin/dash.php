@@ -39,6 +39,9 @@
                 <a href="<?= URL_BASE ?>index.php?url=agendamento">
                     <li>Agendamento</li>
                 </a>
+                <a href="<?= URL_BASE ?>index.php?url=contatoEmail">
+                    <li>Contatos</li>
+                </a>
             </ul>
         </nav>
 

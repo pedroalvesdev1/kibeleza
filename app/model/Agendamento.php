@@ -13,7 +13,7 @@ class Agendamento extends Model
         }
         return [];
     }
-
+    
     public function inserirAgendamento($id_cliente, $id_funcionario, $id_servico, $data, $hora, $status, $observacao)
     {
         $sql = "INSERT INTO tbl_agendamento
@@ -29,7 +29,7 @@ class Agendamento extends Model
         $stmt->bindValue(':observacao', $observacao);
         $stmt->execute();
     }
-
+    
     public function contarAgendamentos(): int
     {
         $sql = "SELECT COUNT(*) AS total FROM tbl_agendamento";
@@ -46,5 +46,30 @@ class Agendamento extends Model
         $stmt->bindValue(':id', $id);
         $stmt->execute();
     }
-
+    
+    public function atualizar($dados)
+    {
+        $sql = "UPDATE tbl_agendamento SET 
+            id_cliente = :cliente,
+            id_funcionario = :funcionario,
+            id_servico = :servico,
+            data_agendamento = :data,
+            hora_agendamento = :hora,
+            status_agendamento = :status,
+            observacoes = :observacoes
+        WHERE id_agendamento = :id_agendamento";
+        
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':cliente', $dados['id_cliente']);
+        $stmt->bindValue(':funcionario', $dados['id_funcionario']);
+        $stmt->bindValue(':servico', $dados['id_servico']);
+        $stmt->bindValue(':data', $dados['data_agendamento']);
+        $stmt->bindValue(':hora', $dados['hora_agendamento']);
+        $stmt->bindValue(':status', $dados['status_agendamento']);
+        $stmt->bindValue(':observacoes', $dados['observacoes']);
+        $stmt->bindValue(':id_agendamento', $dados['id_agendamento']);
+        
+        return $stmt->execute();
+    }
+    
 }
