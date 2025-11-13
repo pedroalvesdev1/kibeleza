@@ -11,7 +11,7 @@
     <!-- Fim Cabeçalho -->
 
     <!-- Início Conteúdo -->
-    <main>
+    <main> 
         <?php require_once("template/banner.php") ?>
 
         <section class="site" id="contato">

@@ -9,6 +9,7 @@ class EspecialidadeController extends Controller
         $modelEspecialidade = new Especialidade();
         $dados['especialidades'] = $modelEspecialidade->listarEspecialidade();
         $dados['titulo'] = "Especialidades";
+
         $dados['conteudo'] = 'admin/especialidade/especialidade';
         
         $this->carregarViews('admin/dash', $dados);
