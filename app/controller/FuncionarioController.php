@@ -11,7 +11,7 @@ class FuncionarioController extends Controller
 
         // Listando os funcionários
         $dados['funcionarios'] = $modelFuncionario->listarFuncionarios();
-        $dados['titulo'] = 'Funcionarios';
+        $dados['titulo'] = "Funcionários";
 
         // Definindo a view do conteúdo
         $dados['conteudo'] = 'admin/funcionario/funcionario';

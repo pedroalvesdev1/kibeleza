@@ -20,6 +20,7 @@ class DashController extends Controller
         $dados = array();
 
         $dados['titulo'] = "DASHBOARD";
+        $dados['nomeUsuario'] = $_SESSION['funcionario']['nome_funcionario'];
         $dados['totalClientes'] = $totalClientes;
         $dados['totalServico'] = $totalServico;
         $dados['totalFuncionario'] = $totalFuncionario;

@@ -15,7 +15,7 @@
         <nav class="sidebar">
             <div class="sidebar-header">
                 <img src="<?php URL_BASE ?>assets/img/perfilFoto.png" alt="Foto do usuário" class="user-photo">
-                <h3>Pedro</h3>
+                <h3><?= $nomeUsuario ?></h3> 
                 <button id="logout" onclick="window.location.href='<?= URL_BASE ?>index.php?url=home'">
                     <img src="<?php URL_BASE ?>assets/img/logout.png" alt="logout">
                 </button>

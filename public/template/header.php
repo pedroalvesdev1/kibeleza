@@ -23,7 +23,7 @@
                     <li><a href="<?php URL_BASE ?>index.php#servico">Serviço</a></li>
                     <li><a href="<?php URL_BASE ?>index.php#equipe">Equipe</a></li>
                     <li><a href="<?php URL_BASE ?>index.php?url=contato">Contato</a></li>
-                    <a href="<?php URL_BASE ?>index.php?url=dash">
+                    <a href="<?php URL_BASE ?>index.php?url=login">
                         <img class="login" src="assets/img/login.png" alt="login">
                     </a>
                 </ul>

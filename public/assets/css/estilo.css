@@ -705,3 +705,119 @@ footer {
         }
     }
 }
+
+
+/* ===========================
+   LOGIN
+=========================== */
+.tela-login {
+    background: linear-gradient(135deg, #FADADD, #F7BFD1);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.tela-login .site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(64, 19, 52, 0.3);
+    text-align: center;
+}
+
+.card-login h2 {
+    font-family: "Lobster", sans-serif;
+    font-size: 32px;
+    color: #401334;
+    margin-bottom: 10px;
+}
+
+.card-login p {
+    color: #8C3A67;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.card-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.card-login .campo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.card-login .campo label {
+    font-family: "Anton", sans-serif;
+    color: #401334;
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-login .campo input {
+    width: 95%;
+    padding: 12px;
+    border: 2px solid #F2AFC4;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #401334;
+    transition: 0.3s;
+}
+
+.card-login .campo input:focus {
+    outline: none;
+    border-color: #8C3A67;
+    box-shadow: 0 0 5px #F2AFC4;
+}
+
+.card-login .acoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card-login .acoes button {
+    width: 100%;
+    padding: 12px;
+    background: #401334;
+    color: #fff;
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-login .acoes button:hover {
+    background: #8C3A67;
+}
+
+.card-login .acoes a {
+    margin-top: 10px;
+    color: #8C3A67;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card-login .acoes a:hover {
+    color: #401334;
+    text-decoration: underline;
+}
