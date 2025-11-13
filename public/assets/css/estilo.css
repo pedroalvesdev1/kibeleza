@@ -6,7 +6,6 @@ font-family: "Anton", sans-serif; Link
 font-family: "Lobster", sans-serif; Titulo
 */
 
-
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -109,6 +108,7 @@ header {
 main {
     .banner {
         width: 100%;
+        padding: 0;
 
         .slick-prev {
             left: 25px;
